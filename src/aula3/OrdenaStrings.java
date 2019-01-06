@@ -2,7 +2,7 @@ package aula3;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+import static java.util.Comparator.comparing;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -16,11 +16,11 @@ public class OrdenaStrings {
 		palavras.add("Teste2");
 
 		//isso
-		palavras.sort(Comparator.comparing(String::length));
+		palavras.sort(comparing(String::length));
 		
 		//é a mesma coisa que isso
-		Function<String, Integer> funcao = s -> s.length();
-		Comparator<String> comparador = Comparator.comparing(funcao);
+//		Function<String, Integer> funcao = s -> s.length();
+//		Comparator<String> comparador = Comparator.comparing(funcao);
 		
 		System.out.println(palavras);
 
